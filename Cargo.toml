@@ -7,6 +7,7 @@ license = "MIT"
 description = "Calculates the prime factors of a given number."
 categories = ["command-line-utilities"]
 readme = "README.md"
+repository = "https://github.com/ericwburden/eb-prime-factor"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
