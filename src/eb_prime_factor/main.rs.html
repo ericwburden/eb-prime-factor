@@ -155,12 +155,17 @@
 <span id="152">152</span>
 <span id="153">153</span>
 <span id="154">154</span>
+<span id="155">155</span>
+<span id="156">156</span>
+<span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
 </pre><div class="example-wrap"><pre class="rust ">
-<span class="doccomment">/// Calculate Prime Factors</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// Given a positive number (up to 18,446,744,073,709,551,615), calculate the set of </span>
-<span class="doccomment">/// prime numbers that yield the given number when multiplied together. For example,</span>
-<span class="doccomment">/// 2 x 2 x 3 x 5 = 60.</span>
+<span class="doccomment">//! Calculate Prime Factors</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Given a positive number (up to 18,446,744,073,709,551,615), calculate the set of </span>
+<span class="doccomment">//! prime numbers that yield the given number when multiplied together. For example,</span>
+<span class="doccomment">//! 2 x 2 x 3 x 5 = 60.</span>
 
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">io</span>::{<span class="self">self</span>, <span class="ident">Write</span>, <span class="ident">Error</span>, <span class="ident">ErrorKind</span>};
 
@@ -239,7 +244,12 @@
     <span class="ident">out</span>
 }
 
-
+<span class="doccomment">/// Calculate and display prime factors</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// The main function collects the user input from invocation, using [clap]. Input is</span>
+<span class="doccomment">/// converted to a u64 and passed to [prime_factors]. Output is parsed back to a </span>
+<span class="doccomment">/// string containing a space-separated list of numbers, then written to</span>
+<span class="doccomment">/// [std::io::stdout].</span>
 <span class="kw">fn</span> <span class="ident">main</span>() <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">Error</span><span class="op">&gt;</span> {
     <span class="comment">// Use *clap* to get input from the user and provide CLI documentation</span>
     <span class="kw">let</span> <span class="ident">matches</span> <span class="op">=</span> <span class="ident">App</span>::<span class="ident">new</span>(<span class="string">&quot;Get Prime Factors&quot;</span>)
