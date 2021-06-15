@@ -1,8 +1,8 @@
-/// Calculate Prime Factors
-///
-/// Given a positive number (up to 18,446,744,073,709,551,615), calculate the set of 
-/// prime numbers that yield the given number when multiplied together. For example,
-/// 2 x 2 x 3 x 5 = 60.
+//! Calculate Prime Factors
+//!
+//! Given a positive number (up to 18,446,744,073,709,551,615), calculate the set of 
+//! prime numbers that yield the given number when multiplied together. For example,
+//! 2 x 2 x 3 x 5 = 60.
 
 use std::io::{self, Write, Error, ErrorKind};
 
@@ -81,7 +81,12 @@ pub fn prime_factors(n: u64) -> Vec<u64> {
     out
 }
 
-
+/// Calculate and display prime factors
+///
+/// The main function collects the user input from invocation, using [clap]. Input is
+/// converted to a u64 and passed to [prime_factors]. Output is parsed back to a 
+/// string containing a space-separated list of numbers, then written to
+/// [std::io::stdout].
 fn main() -> Result<(), Error> {
     // Use *clap* to get input from the user and provide CLI documentation
     let matches = App::new("Get Prime Factors")
